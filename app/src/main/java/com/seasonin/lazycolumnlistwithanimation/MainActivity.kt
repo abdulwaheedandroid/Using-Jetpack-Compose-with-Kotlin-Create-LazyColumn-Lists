@@ -18,6 +18,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
@@ -107,7 +108,9 @@ fun AnimalRow(animal: String, navController: NavHostController) {
 @Composable
 fun AnimalDetails(animal: String) {
     Column {
-        Text(text = "Detail page for $animal")
+        Box(modifier = Modifier.fillMaxSize()) {
+            Text(text = "Detail page for $animal", modifier = Modifier.align(Alignment.Center))
+        }
     }
 }
 
